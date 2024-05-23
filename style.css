@@ -1,0 +1,45 @@
+#gradient-background {
+  background: linear-gradient(
+    104deg,
+    #df0d9c,
+    #ff8dec,
+    #3ec287,
+    #4f2dd4,
+    #7fb8d5,
+    #b8ab36
+  );
+  background-size: 360% 360%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card {
+  margin: 10px;
+}
+
+img,
+button {
+  border: 1px solid white;
+  box-shadow: 5px 10px 18px black;
+  margin-bottom: 20px;
+}
+
+.card-header,
+.card-body {
+  color: white;
+}
+
+.card-body {
+  font-weight: bold;
+}
