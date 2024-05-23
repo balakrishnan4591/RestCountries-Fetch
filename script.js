@@ -21,21 +21,21 @@ async function getCountryDetails() {
 
     for (i = 0; i < count; i++) {
       var collg4Div = document.createElement("div"),
-        // colsm12Div = document.createElement("div"),
         cardDiv = document.createElement("div"),
-        // cardHeaderDiv = document.createElement("div"),
         cardBodyDiv = document.createElement("div"),
-        cardBodyHearder = document.createElement("h3"),
+        cardBodyHearder = document.createElement("div"),
         cardImg = document.createElement("img"),
+        cardContentDiv = document.createElement("div"),
         cardContentCapital = document.createElement("p"),
         cardContentRegion = document.createElement("p"),
         cardContentCountryCode = document.createElement("p"),
         // cardContentLatLng = document.createElement("p"),
         cardWeatherButton = document.createElement("button");
 
-      collg4Div.setAttribute("class", "col-lg-4 col-sm-12");
-      //colsm12Div.setAttribute("class", "col-sm-12");
-      cardDiv.setAttribute("class", "card");
+      collg4Div.setAttribute("class", "col-sm-6 col-md-4 col-lg-4 col-xl-4");
+      collg4Div.setAttribute("id", "column");
+      cardDiv.setAttribute("class", "card h-100");
+
       cardDiv.setAttribute("id", "gradient-background");
 
       // cardHeaderDiv.setAttribute("class", "card-header");
@@ -46,9 +46,13 @@ async function getCountryDetails() {
       //cardBodyDiv.setAttribute("id", "card-body");
       cardImg.setAttribute("class", "card-img-top");
       // cardContentCapital.setAttribute("class", "card-title content");
+      cardContentDiv.setAttribute("class", "card-text");
       cardContentCapital.setAttribute("class", "card-title content");
       cardContentRegion.setAttribute("class", "card-title content");
-      cardContentCountryCode.setAttribute("class", "card-title content");
+      cardContentCountryCode.setAttribute(
+        "class",
+        "card-body card-title content"
+      );
       //cardContentLatLng.setAttribute("class", "card-title content");
       // cardContentLatLng.setAttribute("id", "latlng");
       cardWeatherButton.setAttribute("class", "btn btn-primary");
@@ -79,12 +83,12 @@ async function getCountryDetails() {
       // cardDiv.append(cardHeaderDiv);
       cardDiv.append(cardBodyHearder, cardBodyDiv);
       //cardHeaderDiv.append();
-      cardBodyDiv.append(
-        cardImg,
+
+      cardBodyDiv.append(cardImg, cardContentDiv, cardWeatherButton);
+      cardContentDiv.append(
         cardContentCapital,
         cardContentRegion,
-        cardContentCountryCode,
-        cardWeatherButton
+        cardContentCountryCode
       );
     }
   } catch (e) {

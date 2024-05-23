@@ -28,8 +28,7 @@
   margin: 10px;
 }
 
-img,
-button {
+img {
   border: 1px solid white;
   box-shadow: 5px 10px 18px black;
   margin-bottom: 20px;
@@ -40,6 +39,19 @@ button {
   color: white;
 }
 
+.card-header {
+  font-size: larger;
+  font-weight: bolder;
+}
+
 .card-body {
   font-weight: bold;
+}
+
+button {
+  box-shadow: 5px 10px 18px black;
+}
+
+#column {
+  margin-bottom: 15px;
 }
